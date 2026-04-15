@@ -14,8 +14,12 @@ Open the landing page and pick a presentation, or click a title below to launch 
 
 ### Presentations
 
-- [LLMs in Environmental Impact Assessment (Korean)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-kr)
-- [LLMs in Environmental Impact Assessment (Uzbek)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-uz)
+- [LLMs in Environmental Impact Assessment — Full (Korean)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-full-kr)
+- [LLMs in Environmental Impact Assessment — Full (Uzbek)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-full-uz)
+- [LLMs in Environmental Impact Assessment — Short (Korean)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-short-kr)
+- [LLMs in Environmental Impact Assessment — Short (Uzbek)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-short-uz)
+
+Full versions stream from [Release v1.0](https://github.com/kkhgeo/digital-eia-kr/releases/tag/v1.0); short versions are served directly from GitHub Pages.
 
 ## Related Resource
 

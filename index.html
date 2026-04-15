@@ -131,14 +131,25 @@
 
   <script>
     // Central catalog. Add new entries here as more presentations arrive.
+    const RELEASE_BASE = 'https://github.com/kkhgeo/digital-eia-kr/releases/download/v1.0';
     const presentations = {
-      'eia-llm-kr': {
-        title: 'LLMs in Environmental Impact Assessment',
+      'eia-llm-full-kr': {
+        title: 'LLMs in Environmental Impact Assessment — Full',
+        language: 'Korean',
+        file: `${RELEASE_BASE}/LLM_EIA_video_ko.mp4`
+      },
+      'eia-llm-full-uz': {
+        title: 'LLMs in Environmental Impact Assessment — Full',
+        language: 'Uzbek',
+        file: `${RELEASE_BASE}/LLM_EIA_video_uz.mp4`
+      },
+      'eia-llm-short-kr': {
+        title: 'LLMs in Environmental Impact Assessment — Short',
         language: 'Korean',
         file: 'Digital_EIA_Presentation_kr.mp4'
       },
-      'eia-llm-uz': {
-        title: 'LLMs in Environmental Impact Assessment',
+      'eia-llm-short-uz': {
+        title: 'LLMs in Environmental Impact Assessment — Short',
         language: 'Uzbek',
         file: 'Digital_EIA_Presentation_uz.mp4'
       }
