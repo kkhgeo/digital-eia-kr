@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital EIA Presentation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .container {
+      text-align: center;
+      padding: 40px;
+      max-width: 900px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+    .accent { color: #c6ff00; }
+    .subtitle {
+      font-size: 1.1rem;
+      color: #8b949e;
+      margin-bottom: 60px;
+    }
+    .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .lang-card {
+      background: #161b22;
+      border: 2px solid #30363d;
+      border-radius: 16px;
+      padding: 36px 28px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: center;
+    }
+    .lang-card:hover {
+      border-color: #c6ff00;
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(198, 255, 0, 0.15);
+    }
+    .flag {
+      font-size: 3.5rem;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+    .lang-name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .lang-label {
+      font-size: 0.9rem;
+      color: #8b949e;
+    }
+    .footer {
+      position: fixed;
+      bottom: 20px;
+      font-size: 0.85rem;
+      color: #484f58;
+    }
+
+    /* Video player view */
+    .player {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #000;
+      z-index: 100;
+      align-items: center;
+      justify-content: center;
+    }
+    .player.active { display: flex; }
+    .player video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      z-index: 101;
+      backdrop-filter: blur(8px);
+    }
+    .back-btn:hover { background: rgba(0, 0, 0, 0.85); }
+  </style>
+</head>
+<body>
+
+  <!-- Language selection screen -->
+  <div class="container" id="selector">
+    <h1>Digital <span class="accent">EIA</span> Presentation</h1>
+    <p class="subtitle">환경영향평가의 디지털 전환 / Environmental Impact Assessment digitalizatsiyasi</p>
+
+    <div class="lang-grid">
+      <div class="lang-card" onclick="playVideo('kr')">
+        <div class="flag">🇰🇷</div>
+        <div class="lang-name">한국어</div>
+        <div class="lang-label">Korean Version</div>
+      </div>
+
+      <div class="lang-card" onclick="playVideo('uz')">
+        <div class="flag">🇺🇿</div>
+        <div class="lang-name">O'zbek</div>
+        <div class="lang-label">Uzbek Version</div>
+      </div>
+    </div>
+
+    <div class="footer">Click to play · Press F for fullscreen · ESC to exit</div>
+  </div>
+
+  <!-- Video player -->
+  <div class="player" id="player">
+    <button class="back-btn" onclick="stopVideo()">← Back</button>
+    <video id="videoEl" controls></video>
+  </div>
+
+  <script>
+    const sources = {
+      kr: 'Digital_EIA_Presentation_kr.mp4',
+      uz: 'Digital_EIA_Presentation_uz.mp4'
+    };
+
+    function playVideo(lang) {
+      const video = document.getElementById('videoEl');
+      const player = document.getElementById('player');
+      const selector = document.getElementById('selector');
+
+      video.src = sources[lang];
+      selector.style.display = 'none';
+      player.classList.add('active');
+
+      // Attempt fullscreen + autoplay
+      video.play().catch(() => {});
+      if (player.requestFullscreen) {
+        player.requestFullscreen().catch(() => {});
+      }
+    }
+
+    function stopVideo() {
+      const video = document.getElementById('videoEl');
+      const player = document.getElementById('player');
+      const selector = document.getElementById('selector');
+
+      video.pause();
+      video.src = '';
+      player.classList.remove('active');
+      selector.style.display = 'block';
+
+      if (document.fullscreenElement) document.exitFullscreen();
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      const video = document.getElementById('videoEl');
+      if (e.key === 'f' || e.key === 'F') {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else video.requestFullscreen();
+      }
+      if (e.key === 'Escape' && document.getElementById('player').classList.contains('active')) {
+        stopVideo();
+      }
+    });
+  </script>
+</body>
+</html>
