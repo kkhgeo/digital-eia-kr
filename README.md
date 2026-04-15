@@ -8,20 +8,18 @@ A bilingual presentation on the **digital transformation of Environmental Impact
 
 ## Live Demo
 
-**[https://kkhgeo.github.io/digital-eia-kr/](https://kkhgeo.github.io/digital-eia-kr/)**
+Open the landing page and pick a presentation, or click a title below to launch it directly in fullscreen.
 
-Open the link, click a language card, and the video will play in fullscreen automatically. Designed for live presentations in conference and seminar settings.
+**Landing page**: [https://kkhgeo.github.io/digital-eia-kr/](https://kkhgeo.github.io/digital-eia-kr/)
+
+### Presentations
+
+- [LLMs in Environmental Impact Assessment (Korean)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-kr)
+- [LLMs in Environmental Impact Assessment (Uzbek)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-uz)
 
 ## Related Resource
 
 **[http://snailss.ddns.net:6001/](http://snailss.ddns.net:6001/)** — companion interactive site for the presentation.
-
-## Contents
-
-| Language | File | Size |
-|----------|------|------|
-| Korean | `Digital_EIA_Presentation_kr.mp4` | 18 MB |
-| Uzbek | `Digital_EIA_Presentation_uz.mp4` | 16 MB |
 
 ## Keyboard Shortcuts
 
