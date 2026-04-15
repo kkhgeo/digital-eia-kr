@@ -8,6 +8,10 @@ A bilingual presentation on the **digital transformation of Environmental Impact
 
 Open the link, click a language card, and the video will play in fullscreen automatically. Designed for live presentations in conference and seminar settings.
 
+## 🔗 Related Resource
+
+**[http://snailss.ddns.net:6001/](http://snailss.ddns.net:6001/)** — companion interactive site for the presentation.
+
 ## 📹 Contents
 
 | Language | File | Size |
