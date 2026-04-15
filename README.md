@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="banner.png" alt="Digital EIA Presentation" width="100%">
+  <img src="banner.png" alt="Digital EIA Presentations" width="100%">
 </div>
 
 <br>
 
-A bilingual presentation on the **digital transformation of Environmental Impact Assessment (EIA)**, delivered in Korean and Uzbek.
+A collection of bilingual presentations (Korean · Uzbek) on the **digital transformation of Environmental Impact Assessment (EIA)**, covering global policy trends, national systems, and the emerging role of Large Language Models in environmental review.
 
 ## Live Demo
 
@@ -14,16 +14,23 @@ Open the landing page and pick a presentation, or click a title below to launch 
 
 ### Presentations
 
-- [LLMs in Environmental Impact Assessment — Full (Korean)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-full-kr)
-- [LLMs in Environmental Impact Assessment — Full (Uzbek)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-full-uz)
-- [LLMs in Environmental Impact Assessment — Short (Korean)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-short-kr)
-- [LLMs in Environmental Impact Assessment — Short (Uzbek)](https://kkhgeo.github.io/digital-eia-kr/?v=eia-llm-short-uz)
+**1. Digital EIA: Global Trends and Future Directions** (~20 min)
+Overview of digital transformation in EIA: global policy trends (US, EU, Canada, Australia), Korea's EIASS system, and strategic directions for the next decade.
 
-Full versions stream from [Release v1.0](https://github.com/kkhgeo/digital-eia-kr/releases/tag/v1.0); short versions are served directly from GitHub Pages.
+- [Korean version](https://kkhgeo.github.io/digital-eia-kr/?v=digital-eia-kr)
+- [Uzbek version](https://kkhgeo.github.io/digital-eia-kr/?v=digital-eia-uz)
+
+**2. LLMs in Environmental Impact Assessment** (~15 min)
+Deep dive on Large Language Model adoption in environmental review, based on the US PermitAI initiative (PNNL), NEPAQuAD and MAPLE benchmarks, and a synthesis of recent peer-reviewed research.
+
+- [Korean version](https://kkhgeo.github.io/digital-eia-kr/?v=llm-eia-kr)
+- [Uzbek version](https://kkhgeo.github.io/digital-eia-kr/?v=llm-eia-uz)
+
+Higher-bitrate versions of Presentation 2 are distributed via [Release v1.0](https://github.com/kkhgeo/digital-eia-kr/releases/tag/v1.0); Presentation 1 files are served directly from GitHub Pages.
 
 ## Related Resource
 
-**[http://snailss.ddns.net:6001/](http://snailss.ddns.net:6001/)** — companion interactive site for the presentation.
+**[http://snailss.ddns.net:6001/](http://snailss.ddns.net:6001/)** — companion interactive site for the presentations.
 
 ## Keyboard Shortcuts
 
@@ -31,21 +38,22 @@ Full versions stream from [Release v1.0](https://github.com/kkhgeo/digital-eia-k
 |-----|--------|
 | `Space` | Play / Pause |
 | `F` | Toggle fullscreen |
-| `ESC` | Exit fullscreen / Return to language selector |
+| `ESC` | Exit fullscreen / Return to menu |
 | `->` `<-` | Skip 5 seconds forward / backward |
 | `M` | Mute / Unmute |
 
 ## Offline Playback
 
-For venues with unreliable internet, the entire presentation runs locally without any server. Simply download this repository and open `index.html` in any modern browser.
+For venues with unreliable internet, the entire landing page runs locally without any server. Simply download this repository and open `index.html` in any modern browser. Presentation 1 videos are included in the repo; Presentation 2 videos should be downloaded from the [Release page](https://github.com/kkhgeo/digital-eia-kr/releases/tag/v1.0) and placed next to `index.html`.
 
 ```bash
 git clone https://github.com/kkhgeo/digital-eia-kr.git
 cd digital-eia-kr
+# Download full-length videos from Release v1.0 if offline playback of Presentation 2 is needed
 # Double-click index.html to open in your default browser
 ```
 
-All keyboard shortcuts and the language-selection UI work identically offline.
+All keyboard shortcuts and the selection UI work identically offline.
 
 ## Browser Compatibility
 
@@ -61,10 +69,15 @@ The fullscreen API requires a user gesture (card click), so fullscreen activates
 
 ```
 digital-eia-kr/
-├── index.html                          # Landing page with language selector
-├── Digital_EIA_Presentation_kr.mp4     # Korean version
-├── Digital_EIA_Presentation_uz.mp4     # Uzbek version
+├── index.html                          # Landing page with presentation selector
+├── banner.png                          # README hero banner
+├── Digital_EIA_Presentation_kr.mp4     # Presentation 1 — Korean
+├── Digital_EIA_Presentation_uz.mp4     # Presentation 1 — Uzbek
 └── README.md
+
+Release v1.0 assets:
+├── LLM_EIA_video_ko.mp4                # Presentation 2 — Korean
+└── LLM_EIA_video_uz.mp4                # Presentation 2 — Uzbek
 ```
 
 ## Design
