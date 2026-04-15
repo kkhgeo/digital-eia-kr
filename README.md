@@ -1,4 +1,8 @@
-# Digital EIA Presentation
+<div align="center">
+  <img src="banner.png" alt="Digital EIA Presentation" width="100%">
+</div>
+
+<br>
 
 A bilingual presentation on the **digital transformation of Environmental Impact Assessment (EIA)**, delivered in Korean and Uzbek.
 
